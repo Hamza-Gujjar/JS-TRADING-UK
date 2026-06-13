@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS Trading UK — Premium Motorhome Hire &amp; Sales, UK Wide</title>
+<meta name="description" content="Hire or buy a premium motorhome anywhere in the UK. Fully insured fleet, nationwide delivery, AI-powered booking assistance and 24/7 support from JS Trading UK.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070C14'/%3E%3Cpath d='M14 44 L32 16 L50 44' stroke='%23CBA45C' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='34' r='3' fill='%23CBA45C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "JS Trading UK",
+  "image": "https://www.jstradinguk.co.uk/og-image.jpg",
+  "url": "https://www.jstradinguk.co.uk",
+  "telephone": "+448001210492",
+  "priceRange": "££",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Unit 7, Vale Business Park",
+    "addressLocality": "Wetherby",
+    "addressRegion": "West Yorkshire",
+    "postalCode": "LS22 4DH",
+    "addressCountry": "GB"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 53.9275, "longitude": -1.3858 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "17:00" }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/jstradinguk",
+    "https://www.instagram.com/jstradinguk",
+    "https://www.tiktok.com/@jstrading82"
+  ],
+  "areaServed": "GB"
+}
+</script>
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --bg:#070C14;
+  --bg-1:#0B131F;
+  --bg-2:#0E1B2C;
+  --panel: rgba(255,255,255,0.035);
+  --panel-strong: rgba(255,255,255,0.06);
+  --line: rgba(243,241,232,0.09);
+  --line-strong: rgba(243,241,232,0.16);
+  --gold:#CBA45C;
+  --gold-light:#EAD3A0;
+  --gold-deep:#9A7B36;
+  --cream:#F3F1E8;
+  --muted:#8C9AB0;
+  --muted-2:#5E6C82;
+  --radius: 20px;
+  --radius-sm: 12px;
+  --max: 1280px;
+  --ease: cubic-bezier(.16,1,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth; scroll-padding-top:90px;}
+body{
+  background:var(--bg);
+  color:var(--cream);
+  font-family:'Inter',sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+a{color:inherit; text-decoration:none;}
+ul{list-style:none;}
+button{font-family:inherit; cursor:pointer;}
+h1,h2,h3,h4{font-family:'Fraunces',serif; font-weight:600; line-height:1.12; letter-spacing:-0.01em; color:var(--cream);}
+.mono{font-family:'Space Mono',monospace;}
+::selection{background:var(--gold); color:#1a1306;}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important; transition:none !important; scroll-behavior:auto !important;}
+}
+
+/* ============ LAYOUT HELPERS ============ */
+.container{max-width:var(--max); margin:0 auto; padding:0 32px;}
+.section{padding:128px 0;}
+.section-tight{padding:96px 0;}
+@media (max-width:880px){
+  .section{padding:84px 0;}
+  .section-tight{padding:64px 0;}
+  .container{padding:0 22px;}
+}
+.eyebrow{
+  display:flex; align-items:center; gap:14px;
+  font-family:'Space Mono',monospace; font-size:12.5px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--gold); margin-bottom:22px;
+}
+.eyebrow::before{
+  content:""; display:block; width:34px; height:1px; background:var(--gold);
+}
+.section-head{max-width:680px; margin-bottom:64px;}
+.section-head h2{font-size:clamp(32px,4.6vw,52px); margin-bottom:18px;}
+.section-head p{color:var(--muted); font-size:17px; max-width:520px;}
+.section-head.center{margin-left:auto; margin-right:auto; text-align:center;}
+.section-head.center .eyebrow{justify-content:center;}
+.section-head.center .eyebrow::before{display:none;}
+.section-head.center p{margin:0 auto;}
+
+/* reveal animations */
+.reveal{opacity:0; transform:translateY(28px); transition:opacity .9s var(--ease), transform .9s var(--ease);}
+.reveal.visible{opacity:1; transform:translateY(0);}
+.reveal-stagger > *{opacity:0; transform:translateY(28px); transition:opacity .8s var(--ease), transform .8s var(--ease);}
+.reveal-stagger.visible > *{opacity:1; transform:translateY(0);}
+.reveal-stagger.visible > *:nth-child(1){transition-delay:.02s;}
+.reveal-stagger.visible > *:nth-child(2){transition-delay:.10s;}
+.reveal-stagger.visible > *:nth-child(3){transition-delay:.18s;}
+.reveal-stagger.visible > *:nth-child(4){transition-delay:.26s;}
+.reveal-stagger.visible > *:nth-child(5){transition-delay:.34s;}
+.reveal-stagger.visible > *:nth-child(6){transition-delay:.42s;}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  padding:16px 30px; border-radius:999px; font-weight:600; font-size:15px;
+  border:1px solid transparent; transition:transform .35s var(--ease), box-shadow .35s var(--ease), background .35s var(--ease), border-color .35s var(--ease);
+  white-space:nowrap;
+}
+.btn-gold{
+  background:linear-gradient(135deg, var(--gold-light), var(--gold) 60%, var(--gold-deep));
+  color:#1A1306; box-shadow:0 10px 30px -10px rgba(203,164,92,.55);
+}
+.btn-gold:hover{transform:translateY(-2px); box-shadow:0 16px 36px -10px rgba(203,164,92,.7);}
+.btn-ghost{
+  background:var(--panel); border:1px solid var(--line-strong); color:var(--cream);
+  backdrop-filter:blur(8px);
+}
+.btn-ghost:hover{background:var(--panel-strong); transform:translateY(-2px); border-color:var(--gold);}
+.btn-block{width:100%;}
+.btn-sm{padding:11px 22px; font-size:13.5px;}
+
+/* ============ GLASS PANELS ============ */
+.glass{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+}
+
+/* ============ JOURNEY RAIL ============ */
+.journey-rail{
+  position:fixed; left:38px; top:0; height:100vh; width:30px; z-index:60;
+  display:none; flex-direction:column; align-items:center; justify-content:center;
+  pointer-events:none;
+}
+.journey-rail .rail-track{
+  position:relative; width:1px; height:62vh; background:var(--line-strong); overflow:hidden;
+}
+.journey-rail .rail-fill{
+  position:absolute; top:0; left:0; width:100%; height:0%;
+  background:linear-gradient(180deg, var(--gold-light), var(--gold));
+  transition:height .25s linear;
+}
+.journey-rail .rail-nodes{
+  position:absolute; top:0; left:50%; height:100%; transform:translateX(-50%);
+  display:flex; flex-direction:column; justify-content:space-between; width:30px;
+}
+.journey-rail .rail-node{
+  width:9px; height:9px; border-radius:50%; background:var(--bg-1);
+  border:1px solid var(--line-strong); transform:translateX(-50%); margin-left:0.5px;
+  transition:background .3s, border-color .3s, box-shadow .3s, transform .3s;
+}
+.journey-rail .rail-node.active{
+  background:var(--gold); border-color:var(--gold);
+  box-shadow:0 0 0 4px rgba(203,164,92,.18);
+  transform:translateX(-50%) scale(1.25);
+}
+@media (min-width:1240px){ .journey-rail{display:flex;} }
+
+/* ============ NAV ============ */
+header.nav{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  padding:22px 0; transition:background .4s var(--ease), border-color .4s var(--ease), padding .4s var(--ease), backdrop-filter .4s var(--ease);
+  border-bottom:1px solid transparent;
+}
+header.nav.scrolled{
+  background:rgba(7,12,20,.78); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line); padding:14px 0;
+}
+.nav-inner{display:flex; align-items:center; justify-content:space-between; gap:24px;}
+.brand{display:flex; align-items:center; gap:12px; font-family:'Fraunces',serif;}
+.brand-mark{width:46px; height:46px; flex-shrink:0; border-radius:50%; object-fit:cover; background:#070C14; border:1px solid rgba(255,255,255,.12); box-shadow:0 10px 24px -18px rgba(0,0,0,.45);}
+.brand-text{display:flex; flex-direction:column; line-height:1.05;}
+.brand-text strong{font-size:19px; letter-spacing:.08em; font-weight:700;}
+.brand-text span{font-family:'Space Mono',monospace; font-size:10px; letter-spacing:.32em; color:var(--gold); margin-top:3px;}
+.nav-links{display:flex; align-items:center; gap:34px; font-size:14.5px; font-weight:500;}
+.nav-right{display:flex; align-items:center; gap:18px;}
+.nav-toggle{display:none; align-items:center; justify-content:center; gap:12px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); color:var(--cream); padding:12px 18px; border-radius:999px; font-size:14px; letter-spacing:.08em; text-transform:uppercase; font-weight:700; transition:background .3s, transform .3s, border-color .3s;}
+.nav-toggle:hover{background:rgba(255,255,255,.12); transform:translateY(-1px);}
+.nav-close{margin-left:auto; padding:14px 18px; border:none; border-radius:999px; background:rgba(255,255,255,.08); color:var(--cream); font-size:14px; letter-spacing:.08em; text-transform:uppercase; cursor:pointer;}
+.nav-mobile{
+  position:fixed; inset:0; background:rgba(7,12,20,.96); backdrop-filter:blur(16px); display:flex; flex-direction:column; justify-content:center; align-items:center; gap:20px; padding:36px 24px; transform:translateY(-8px); opacity:0; pointer-events:none; transition:.35s var(--ease); z-index:90;
+}
+.nav-mobile.open{transform:translateY(0); opacity:1; pointer-events:auto;}
+.nav-mobile-links{display:grid; width:100%; gap:16px;}
+.nav-mobile-links a{
+  display:block; width:100%; text-align:center; padding:18px 20px; border-radius:16px; border:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.04); color:var(--cream); font-size:18px; font-weight:700; transition:background .3s, border-color .3s;
+}
+.nav-mobile-links a:hover{background:rgba(203,164,92,.18); border-color:rgba(203,164,92,.25); color:#F3E8D1;}
+.nav-mobile .btn{width:100%; max-width:460px; padding:18px 24px; font-size:16px;}
+@media (max-width:980px){
+  .nav-links{display:none;}
+  .nav-toggle{display:flex; width:100%; max-width:180px;}
+}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative; min-height:100vh; display:flex; align-items:center;
+  overflow:hidden; padding-top:90px;
+  background:
+    radial-gradient(ellipse 70% 55% at 78% 18%, rgba(203,164,92,.16), transparent 60%),
+    radial-gradient(ellipse 90% 60% at 20% 110%, rgba(20,42,68,.65), transparent 60%),
+    linear-gradient(180deg, #0A1320 0%, #070C14 60%, #050810 100%);
+}
+.hero-glow{
+  position:absolute; top:-10%; right:-10%; width:55vw; height:55vw; max-width:760px; max-height:760px;
+  background:radial-gradient(circle, rgba(234,211,160,.20), rgba(234,211,160,0) 70%);
+  filter:blur(10px); border-radius:50%; pointer-events:none;
+}
+.hero-illustration{
+  position:absolute; left:0; right:0; bottom:0; width:100%; height:48%; min-height:300px;
+  pointer-events:none;
+}
+.hero-illustration svg{width:100%; height:100%; display:block;}
+.hero-content{position:relative; z-index:5; max-width:720px;}
+.hero-content .eyebrow{margin-bottom:26px;}
+.hero h1{font-size:clamp(40px,6.4vw,76px); margin-bottom:24px; max-width:13ch;}
+.hero h1 em{font-style:italic; color:var(--gold-light); font-weight:500;}
+.hero-sub{color:var(--muted); font-size:clamp(16px,1.6vw,19px); max-width:48ch; margin-bottom:42px;}
+.hero-ctas .btn{min-width:170px;}
+.hero-ctas{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:64px;}
+.hero-trust{display:flex; flex-wrap:wrap; gap:28px 40px; padding-top:28px; border-top:1px solid var(--line); max-width:680px;}
+.hero-trust .stat{min-width:140px;}
+.hero-trust .stat strong{display:block; font-family:'Fraunces',serif; font-size:26px; color:var(--gold-light); font-weight:600;}
+.hero-trust .stat span{font-size:12.5px; color:var(--muted); letter-spacing:.06em; text-transform:uppercase;}
+.hero-trust .stat span{font-size:12.5px; color:var(--muted); letter-spacing:.06em; text-transform:uppercase;}
+.scroll-cue{
+  position:absolute; left:32px; bottom:34px; z-index:5; display:flex; align-items:center; gap:12px;
+  font-family:'Space Mono',monospace; font-size:11px; letter-spacing:.2em; color:var(--muted-2); text-transform:uppercase;
+}
+.scroll-cue .line{width:1px; height:46px; background:linear-gradient(180deg, var(--gold), transparent); position:relative; overflow:hidden;}
+.scroll-cue .line::after{
+  content:""; position:absolute; top:0; left:0; width:100%; height:14px; background:var(--gold-light);
+  animation:scrollDown 2.4s ease-in-out infinite;
+}
+@keyframes scrollDown{0%{transform:translateY(-20px); opacity:0;} 30%{opacity:1;} 100%{transform:translateY(60px); opacity:0;}}
+@media (max-width:680px){ .scroll-cue{display:none;} }
+
+/* ============ FLEET ============ */
+.fleet-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:24px;}
+@media (max-width:1180px){ .fleet-grid{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:640px){ .fleet-grid{grid-template-columns:1fr;} }
+.fleet-card{
+  display:flex; flex-direction:column; overflow:hidden; transition:transform .45s var(--ease), border-color .45s var(--ease), box-shadow .45s var(--ease);
+}
+.fleet-card:hover{transform:translateY(-6px); border-color:var(--line-strong); box-shadow:0 24px 50px -28px rgba(0,0,0,.7);}
+.fleet-visual{
+  position:relative; aspect-ratio:4/3; display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(150deg, var(--bg-2), var(--bg-1)); border-bottom:1px solid var(--line);
+  overflow:hidden;
+}
+.fleet-visual::before{
+  content:""; position:absolute; inset:0;
+  background:radial-gradient(circle at 75% 15%, rgba(203,164,92,.22), transparent 55%);
+}
+.fleet-visual svg{width:78%; height:auto; position:relative; z-index:1; color:var(--gold-light);}
+.fleet-tag{
+  position:absolute; top:16px; left:16px; z-index:2; font-family:'Space Mono',monospace; font-size:11px;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--gold); background:rgba(7,12,20,.55);
+  border:1px solid var(--line); padding:6px 12px; border-radius:999px; backdrop-filter:blur(6px);
+}
+.fleet-body{padding:26px 24px 28px; display:flex; flex-direction:column; gap:14px; flex:1;}
+.fleet-body h3{font-size:23px;}
+.fleet-price{display:flex; align-items:baseline; gap:8px;}
+.fleet-price strong{font-size:26px; font-family:'Fraunces',serif; color:var(--gold-light); font-weight:600;}
+.fleet-price .per{font-size:13px; color:var(--muted);}
+.fleet-price .week{font-size:12.5px; color:var(--muted-2); margin-left:auto; font-family:'Space Mono',monospace;}
+.fleet-features{display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 10px;}
+.fleet-features li{
+  font-size:12px; padding:6px 11px; border-radius:999px; border:1px solid var(--line);
+  color:var(--muted); font-family:'Space Mono',monospace; letter-spacing:.02em;
+}
+.fleet-body .btn{margin-top:auto;}
+
+/* ============ WHY ============ */
+.why-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:20px;}
+@media (max-width:1180px){ .why-grid{grid-template-columns:repeat(3,1fr);} }
+@media (max-width:760px){ .why-grid{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:520px){ .why-grid{grid-template-columns:1fr;} }
+.why-card{padding:32px 24px; display:flex; flex-direction:column; gap:16px; transition:border-color .35s, transform .35s;}
+.why-card:hover{transform:translateY(-4px); border-color:var(--gold);}
+.why-icon{
+  width:48px; height:48px; border-radius:14px; display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(135deg, rgba(203,164,92,.22), rgba(203,164,92,.04)); color:var(--gold-light);
+  border:1px solid var(--line-strong);
+}
+.why-icon svg{width:24px; height:24px;}
+.why-card h3{font-size:18px;}
+.why-card p{color:var(--muted); font-size:14.5px;}
+
+/* ============ BOOKING ============ */
+.booking-wrap{
+  display:grid; grid-template-columns:1fr 1.05fr; gap:0; overflow:hidden; align-items:stretch;
+}
+@media (max-width:920px){ .booking-wrap{grid-template-columns:1fr;} }
+.booking-side{
+  padding:56px 48px; background:linear-gradient(160deg, var(--bg-2), var(--bg-1));
+  display:flex; flex-direction:column; justify-content:center; gap:24px; position:relative; overflow:hidden;
+}
+.booking-side::before{
+  content:""; position:absolute; right:-60px; top:-60px; width:240px; height:240px; border-radius:50%;
+  background:radial-gradient(circle, rgba(203,164,92,.18), transparent 70%);
+}
+.booking-side h3{font-size:30px; margin-bottom:6px;}
+.booking-side p{color:var(--muted); font-size:15px;}
+.booking-list{display:flex; flex-direction:column; gap:16px; margin-top:8px;}
+.booking-list li{display:flex; gap:14px; align-items:flex-start; font-size:14.5px; color:var(--cream);}
+.booking-list svg{width:18px; height:18px; flex-shrink:0; color:var(--gold); margin-top:2px;}
+.booking-list span{color:var(--muted); font-size:13.5px; display:block; margin-top:2px;}
+.whatsapp-link{
+  display:inline-flex; align-items:center; gap:10px; margin-top:8px; padding:14px 22px; border-radius:999px;
+  background:rgba(80,200,140,.12); border:1px solid rgba(80,200,140,.35); color:#bdf0d6; font-weight:600; font-size:14.5px;
+  width:fit-content; transition:.3s;
+}
+.whatsapp-link:hover{background:rgba(80,200,140,.2); transform:translateY(-2px);}
+.whatsapp-link svg{width:20px; height:20px;}
+
+.booking-form{padding:56px 48px; display:flex; flex-direction:column; gap:18px; background:var(--panel);}
+.form-row{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+@media (max-width:560px){ .form-row{grid-template-columns:1fr;} }
+.field{display:flex; flex-direction:column; gap:8px;}
+.field label{font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-family:'Space Mono',monospace;}
+.field input, .field select, .field textarea{
+  background:rgba(255,255,255,.03); border:1px solid var(--line-strong); border-radius:var(--radius-sm);
+  padding:14px 16px; color:var(--cream); font-size:15px; font-family:'Inter',sans-serif; transition:border-color .25s, background .25s;
+  -webkit-appearance:none; appearance:none;
+}
+.field select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%238C9AB0' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:right 16px center; padding-right:38px;
+}
+.field input:focus, .field select:focus, .field textarea:focus{outline:none; border-color:var(--gold); background:rgba(255,255,255,.05);}
+.field textarea{resize:vertical; min-height:90px; font-family:inherit;}
+.field input::placeholder, .field textarea::placeholder{color:var(--muted-2);}
+.form-note{font-size:12.5px; color:var(--muted-2); margin-top:-4px;}
+.form-success{
+  display:none; align-items:center; gap:10px; padding:14px 16px; border-radius:var(--radius-sm);
+  background:rgba(203,164,92,.1); border:1px solid rgba(203,164,92,.35); color:var(--gold-light); font-size:14px;
+}
+.form-success.show{display:flex;}
+.form-success svg{width:18px; height:18px; flex-shrink:0;}
+
+/* ============ ABOUT ============ */
+.about-wrap{display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;}
+@media (max-width:920px){ .about-wrap{grid-template-columns:1fr; gap:42px;} }
+.about-copy p{color:var(--muted); margin-bottom:18px; font-size:16px;}
+.about-stats{display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:34px;}
+.about-stat{padding:24px; border-radius:var(--radius-sm);}
+.about-stat strong{display:block; font-family:'Fraunces',serif; font-size:34px; color:var(--gold-light); font-weight:600;}
+.about-stat span{font-size:12.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.1em; font-family:'Space Mono',monospace;}
+.about-visual{position:relative; aspect-ratio:1/1.05; border-radius:var(--radius); overflow:hidden;
+  background:linear-gradient(160deg, var(--bg-2), var(--bg-1)); border:1px solid var(--line);}
+.about-visual svg{position:absolute; inset:0; width:100%; height:100%;}
+.about-badge{
+  position:absolute; bottom:24px; left:24px; right:24px; padding:18px 22px; display:flex; align-items:center; gap:14px;
+}
+.about-badge .stars{display:flex; gap:3px;}
+.about-badge .stars svg{width:16px; height:16px; color:var(--gold);}
+.about-badge strong{font-family:'Fraunces',serif; font-size:18px;}
+.about-badge span{font-size:12.5px; color:var(--muted); display:block;}
+
+/* ============ TESTIMONIALS ============ */
+.testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+@media (max-width:920px){ .testi-grid{grid-template-columns:1fr;} }
+.testi-card{padding:32px; display:flex; flex-direction:column; gap:18px;}
+.testi-stars{display:flex; gap:4px;}
+.testi-stars svg{width:16px; height:16px; color:var(--gold);}
+.testi-card p{font-size:15.5px; color:var(--cream); font-family:'Fraunces',serif; font-weight:300; font-style:italic; line-height:1.6; font-size:17px;}
+.testi-person{display:flex; align-items:center; gap:14px; margin-top:auto;}
+.testi-avatar{
+  width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(135deg, var(--gold-light), var(--gold)); color:#1A1306; font-weight:700; font-size:14px;
+  font-family:'Space Mono',monospace;
+}
+.testi-person strong{display:block; font-size:14.5px;}
+.testi-person span{font-size:12.5px; color:var(--muted);}
+
+/* ============ CONTACT ============ */
+.contact-wrap{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+@media (max-width:920px){ .contact-wrap{grid-template-columns:1fr;} }
+.contact-form-panel, .contact-map-panel{padding:0; overflow:hidden;}
+.contact-form-panel{padding:44px;}
+.contact-info{display:flex; flex-direction:column; gap:18px; margin-top:28px;}
+.contact-info li{display:flex; gap:14px; align-items:flex-start; font-size:14.5px;}
+.contact-info svg{width:18px; height:18px; color:var(--gold); margin-top:2px; flex-shrink:0;}
+.contact-info span{color:var(--muted); display:block; font-size:13px;}
+.map-frame{width:100%; height:100%; min-height:420px; border:0; filter:grayscale(.4) invert(.92) contrast(.9);}
+
+/* ============ FOOTER ============ */
+footer{border-top:1px solid var(--line); padding:64px 0 32px; background:var(--bg-1);}
+.footer-top{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:48px; margin-bottom:48px;}
+@media (max-width:880px){ .footer-top{grid-template-columns:1fr 1fr; gap:36px;} }
+@media (max-width:560px){ .footer-top{grid-template-columns:1fr;} }
+.footer-brand p{color:var(--muted); font-size:14px; margin:20px 0 22px; max-width:320px;}
+.footer-social{display:flex; gap:12px;}
+.footer-col h4{letter-spacing:.16em;}
+.footer-social a{
+  width:38px; height:38px; border-radius:50%; border:1px solid var(--line-strong); display:flex; align-items:center;
+  justify-content:center; transition:.3s;
+}
+.footer-social a:hover{border-color:var(--gold); color:var(--gold-light); transform:translateY(-2px);}
+.footer-social svg{width:17px; height:17px;}
+.footer-col h4{font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin-bottom:18px; font-family:'Space Mono',monospace; font-weight:400;}
+.footer-col ul{display:flex; flex-direction:column; gap:11px;}
+.footer-col a{color:var(--cream); font-size:14.5px; transition:color .25s;}
+.footer-col a:hover{color:var(--gold-light);}
+.footer-bottom{
+  border-top:1px solid var(--line); padding-top:28px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px;
+  font-size:12.5px; color:var(--muted-2); font-family:'Space Mono',monospace;
+}
+.footer-bottom a{color:var(--muted-2);}
+.footer-bottom a:hover{color:var(--gold-light);}
+
+/* ============ CHATBOT ============ */
+.chat-toggle{
+  position:fixed; bottom:26px; right:26px; z-index:120; width:64px; height:64px; border-radius:50%;
+  background:linear-gradient(135deg, var(--gold-light), var(--gold) 65%, var(--gold-deep));
+  display:flex; align-items:center; justify-content:center; border:none; box-shadow:0 14px 34px -10px rgba(203,164,92,.6);
+  transition:transform .35s var(--ease);
+}
+.chat-toggle:hover{transform:scale(1.06);}
+.chat-toggle svg{width:28px; height:28px; color:#1A1306;}
+.chat-toggle .ping{
+  position:absolute; top:-4px; right:-4px; width:16px; height:16px; border-radius:50%; background:#5ED99B;
+  border:2px solid var(--bg); animation:pulseDot 2.2s infinite;
+}
+@keyframes pulseDot{0%,100%{transform:scale(1);} 50%{transform:scale(1.25);}}
+
+.chat-panel{
+  position:fixed; bottom:104px; right:26px; z-index:121; width:380px; max-width:calc(100vw - 36px);
+  height:560px; max-height:74vh; border-radius:22px; overflow:hidden; display:flex; flex-direction:column;
+  background:rgba(11,19,31,.92); border:1px solid var(--line-strong); backdrop-filter:blur(20px);
+  box-shadow:0 30px 60px -20px rgba(0,0,0,.7);
+  transform:translateY(20px) scale(.97); opacity:0; pointer-events:none; transition:.35s var(--ease);
+}
+.chat-panel.open{transform:translateY(0) scale(1); opacity:1; pointer-events:auto;}
+.chat-head{
+  padding:18px 20px; display:flex; align-items:center; gap:12px; border-bottom:1px solid var(--line);
+  background:linear-gradient(135deg, rgba(203,164,92,.14), transparent);
+}
+.chat-head .dot{width:10px; height:10px; border-radius:50%; background:#5ED99B; box-shadow:0 0 0 4px rgba(94,217,155,.18);}
+.chat-head strong{font-size:14.5px; display:block;}
+.chat-head span{font-size:12px; color:var(--muted);}
+.chat-close{margin-left:auto; background:none; border:none; color:var(--muted); width:28px; height:28px; display:flex; align-items:center; justify-content:center; border-radius:8px;}
+.chat-close:hover{background:var(--panel); color:var(--cream);}
+.chat-close svg{width:16px; height:16px;}
+.chat-body{flex:1; overflow-y:auto; padding:18px 16px; display:flex; flex-direction:column; gap:12px;}
+.chat-body::-webkit-scrollbar{width:5px;}
+.chat-body::-webkit-scrollbar-thumb{background:var(--line-strong); border-radius:4px;}
+.msg{max-width:85%; padding:11px 15px; border-radius:16px; font-size:14px; line-height:1.5; animation:msgIn .35s var(--ease);}
+@keyframes msgIn{from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:translateY(0);}}
+.msg.bot{background:var(--panel); border:1px solid var(--line); border-bottom-left-radius:4px; align-self:flex-start;}
+.msg.user{background:linear-gradient(135deg, var(--gold-light), var(--gold)); color:#1A1306; border-bottom-right-radius:4px; align-self:flex-end; font-weight:500;}
+.chat-quick{display:flex; flex-wrap:wrap; gap:8px; align-self:flex-start; max-width:100%;}
+.chat-quick button{
+  font-size:12.5px; padding:9px 14px; border-radius:999px; border:1px solid var(--line-strong); background:var(--panel);
+  color:var(--cream); transition:.25s;
+}
+.chat-quick button:hover{border-color:var(--gold); color:var(--gold-light);}
+.chat-input-row{display:flex; gap:10px; padding:14px; border-top:1px solid var(--line);}
+.chat-input-row input{
+  flex:1; background:rgba(255,255,255,.04); border:1px solid var(--line-strong); border-radius:999px;
+  padding:11px 16px; color:var(--cream); font-size:14px;
+}
+.chat-input-row input:focus{outline:none; border-color:var(--gold);}
+.chat-input-row button{
+  width:42px; height:42px; border-radius:50%; border:none; background:linear-gradient(135deg, var(--gold-light), var(--gold));
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.chat-input-row button svg{width:18px; height:18px; color:#1A1306;}
+@media (max-width:480px){
+  .chat-panel{right:14px; left:14px; width:auto; bottom:96px;}
+  .chat-toggle{right:18px; bottom:18px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ JOURNEY RAIL ============ -->
+<nav class="journey-rail" aria-hidden="true">
+  <div class="rail-track">
+    <div class="rail-fill" id="railFill"></div>
+    <div class="rail-nodes">
+      <span class="rail-node" data-section="hero"></span>
+      <span class="rail-node" data-section="fleet"></span>
+      <span class="rail-node" data-section="why"></span>
+      <span class="rail-node" data-section="booking"></span>
+      <span class="rail-node" data-section="about"></span>
+      <span class="rail-node" data-section="reviews"></span>
+      <span class="rail-node" data-section="contact"></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="siteNav">
+  <div class="container nav-inner">
+    <a href="#hero" class="brand">
+      <img class="brand-mark" src="logo.jpg" alt="JS Trading UK logo">
+      <span class="brand-text">
+        <strong>JS TRADING UK</strong>
+        <span>MOTORHOME BUYERS</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#fleet">Fleet</a>
+      <a href="#why">Why Choose Us</a>
+      <a href="#booking">Booking</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a href="#booking" class="btn btn-gold btn-sm">Book Now</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu">Menu</button>
+    </div>
+  </div>
+  <div class="nav-mobile" id="navMobile" aria-hidden="true">
+    <button class="nav-close" id="navClose" aria-label="Close navigation menu">Close</button>
+    <div class="nav-mobile-links">
+      <a href="#fleet">Fleet</a>
+      <a href="#why">Why Choose Us</a>
+      <a href="#booking">Booking</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#booking" class="btn btn-gold btn-block">Booking</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-illustration">
+    <svg viewBox="0 0 1600 520" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 520 L0 300 L160 220 L300 300 L470 180 L620 300 L760 240 L920 320 L1080 200 L1250 300 L1400 230 L1600 320 L1600 520 Z" fill="#0A1626"/>
+      <path d="M0 520 L0 380 L220 300 L380 360 L560 280 L760 360 L960 300 L1180 380 L1380 320 L1600 390 L1600 520 Z" fill="#0D1F33"/>
+      <path d="M0 520 L0 460 L240 420 L460 470 L700 430 L940 480 L1180 430 L1420 470 L1600 440 L1600 520 Z" fill="#11283F"/>
+      <path d="M800 520 C780 440 760 400 800 320 C840 400 820 440 800 520 Z" fill="#142A44" opacity=".0"/>
+      <path id="roadPath" d="M650 520 C700 430 740 400 800 360 C860 400 900 430 950 520" fill="none" stroke="#3A4A60" stroke-width="34" stroke-linecap="round"/>
+      <path d="M650 520 C700 430 740 400 800 360 C860 400 900 430 950 520" fill="none" stroke="#CBA45C" stroke-width="2" stroke-dasharray="10 14" stroke-linecap="round" opacity=".55"/>
+      <g transform="translate(715,388) scale(1.05)">
+        <ellipse cx="60" cy="118" rx="76" ry="10" fill="#000" opacity=".35"/>
+        <rect x="6" y="44" width="118" height="58" rx="10" fill="#16263B" stroke="#3A4A60" stroke-width="1.5"/>
+        <path d="M6 56 C6 48 14 44 24 44 H64 V70 H6 Z" fill="#1E3450" stroke="#3A4A60" stroke-width="1.5"/>
+        <rect x="40" y="50" width="18" height="14" rx="2" fill="#EAD3A0" opacity=".85"/>
+        <rect x="74" y="52" width="40" height="20" rx="3" fill="#EAD3A0" opacity=".22"/>
+        <circle cx="32" cy="104" r="13" fill="#0B1320" stroke="#3A4A60" stroke-width="2"/>
+        <circle cx="98" cy="104" r="13" fill="#0B1320" stroke="#3A4A60" stroke-width="2"/>
+        <circle cx="32" cy="104" r="4" fill="#CBA45C"/>
+        <circle cx="98" cy="104" r="4" fill="#CBA45C"/>
+        <circle cx="20" cy="58" r="10" fill="#EAD3A0" opacity=".5" />
+        <circle cx="20" cy="58" r="22" fill="#EAD3A0" opacity=".10"/>
+      </g>
+    </svg>
+  </div>
+  <div class="container hero-content">
+    <div class="eyebrow">UK-WIDE MOTORHOME HIRE &amp; SALES</div>
+    <h1>Explore freedom with <em>premium</em> motorhome rentals across the UK</h1>
+    <p class="hero-sub">Hand-detailed, fully insured motorhomes delivered to your door. Book in minutes with our AI-powered assistant — real help, day or night, from a real UK team.</p>
+    <div class="hero-ctas">
+      <a href="#booking" class="btn btn-gold">Book Now</a>
+      <a href="#fleet" class="btn btn-ghost">View Motorhomes</a>
+    </div>
+    <div class="hero-trust">
+      <div class="stat"><strong>4.9 / 5</strong><span>From 600+ UK travellers</span></div>
+      <div class="stat"><strong>24/7</strong><span>AI &amp; human support</span></div>
+      <div class="stat"><strong>Nationwide</strong><span>Delivery &amp; collection</span></div>
+      <div class="stat"><strong>Fully Insured</strong><span>Every motorhome, every trip</span></div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>SCROLL</span><span class="line"></span></div>
+</section>
+
+<!-- ============ FLEET ============ -->
+<section class="section" id="fleet">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">JS TRADING UK · 02 — THE FLEET</div>
+      <h2>Choose your motorhome</h2>
+      <p>Four motorhomes, each inspected, valeted and safety-checked before every single journey. Pick one below and we'll carry your details straight into the booking form.</p>
+    </div>
+
+    <div class="fleet-grid reveal-stagger">
+      <!-- Highlander -->
+      <article class="fleet-card glass">
+        <div class="fleet-visual">
+          <span class="fleet-tag">Coachbuilt · 4 Berth</span>
+          <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 70 H150 V35 C150 28 145 24 138 24 H60 L40 50 H10 Z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+            <rect x="60" y="30" width="84" height="40" rx="3" stroke="currentColor" stroke-width="2" fill="none"/>
+            <rect x="20" y="50" width="14" height="12" rx="1.5" fill="currentColor" opacity=".5"/>
+            <rect x="70" y="36" width="22" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5" fill="currentColor" fill-opacity=".15"/>
+            <rect x="100" y="36" width="34" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5" fill="currentColor" fill-opacity=".15"/>
+            <circle cx="46" cy="74" r="10" stroke="currentColor" stroke-width="2.5" fill="none"/>
+            <circle cx="122" cy="74" r="10" stroke="currentColor" stroke-width="2.5" fill="none"/>
+          </svg>
+        </div>
+        <div class="fleet-body">
+          <h3>The Highlander</h3>
+          <div class="fleet-price"><strong>£145</strong><span class="per">/ night</span><span class="week">£899 / wk</span></div>
+          <ul class="fleet-features">
+            <li>4 berths</li><li>Automatic</li><li>Full kitchen</li><li>Shower &amp; WC</li><li>Solar power</li><li>Awning incl.</li>
+          </ul>
+          <button class="btn btn-ghost btn-block book-van" data-van="The Highlander (4 berth)">Book Now</button>
+        </div>
+      </article>
+
+      <!-- Voyager -->
+      <article class="fleet-card glass">
+        <div class="fleet-visual">
+          <span class="fleet-tag">Campervan · 2 Berth</span>
+          <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 70 H160 V42 C160 36 156 32 150 32 H120 V20 H70 V32 H40 L20 50 H10 Z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+            <rect x="70" y="20" width="50" height="12" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+            <rect x="22" y="50" width="14" height="12" rx="1.5" fill="currentColor" opacity=".5"/>
+            <rect x="78" y="40" width="64" height="14" rx="1.5" stroke="currentColor" stroke-width="1.5" fill="currentColor" fill-opacity=".15"/>
+            <circle cx="48" cy="74" r="10" stroke="currentColor" stroke-width="2.5" fill="none"/>
+            <circle cx="130" cy="74" r="10" stroke="currentColor" stroke-width="2.5" fill="none"/>
+          </svg>
+        </div>
+        <div class="fleet-body">
+          <h3>The Voyager</h3>
+          <div class="fleet-price"><strong>£95</strong><span class="per">/ night</span><span class="week">£599 / wk</span></div>
+          <ul class="fleet-features">
+            <li>2 berths</li><li>Manual</li><li>Kitchenette</li><li>Pop-top roof</li><li>Solar power</li><li>Bike rack</li>
+          </ul>
+          <button class="btn btn-ghost btn-block book-van" data-van="The Voyager (2 berth)">Book Now</button>
+        </div>
+      </article>
+
+      <!-- Sovereign -->
+      <article class="fleet-card glass">
+        <div class="fleet-visual">
+          <span class="fleet-tag">A-Class · 6 Berth</span>
+          <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 70 H172 V34 C172 30 168 27 163 27 L120 22 H40 L8 50 Z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+            <path d="M40 50 L60 27" stroke="currentColor" stroke-width="2"/>
+            <rect x="64" y="32" width="100" height="18" rx="2" stroke="currentColor" stroke-width="1.5" fill="currentColor" fill-opacity=".15"/>
+            <rect x="14" y="50" width="20" height="12" rx="1.5" fill="currentColor" opacity=".5"/>
+            <circle cx="50" cy="74" r="10" stroke="currentColor" stroke-width="2.5" fill="none"/>
+            <circle cx="148" cy="74" r="10" stroke="currentColor" stroke-width="2.5" fill="none"/>
+          </svg>
+        </div>
+        <div class="fleet-body">
+          <h3>The Sovereign</h3>
+          <div class="fleet-price"><strong>£215</strong><span class="per">/ night</span><span class="week">£1,290 / wk</span></div>
+          <ul class="fleet-features">
+            <li>6 berths</li><li>Automatic</li><li>Twin bathrooms</li><li>Satellite TV</li><li>Drive-away awning</li><li>Reversing cam</li>
+          </ul>
+          <button class="btn btn-ghost btn-block book-van" data-van="The Sovereign (6 berth)">Book Now</button>
+        </div>
+      </article>
+
+      <!-- Wanderer -->
+      <article class="fleet-card glass">
+        <div class="fleet-visual">
+          <span class="fleet-tag">Coachbuilt · 5 Berth</span>
+          <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 70 H148 V35 C148 28 143 24 136 24 H58 L38 50 H10 Z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+            <rect x="58" y="30" width="82" height="40" rx="3" stroke="currentColor" stroke-width="2" fill="none"/>
+            <rect x="20" y="50" width="14" height="12" rx="1.5" fill="currentColor" opacity=".5"/>
+            <rect x="68" y="36" width="24" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5" fill="currentColor" fill-opacity=".15"/>
+            <rect x="100" y="36" width="32" height="16" rx="1.5" stroke="currentColor" stroke-width="1.5" fill="currentColor" fill-opacity=".15"/>
+            <circle cx="46" cy="74" r="10" stroke="currentColor" stroke-width="2.5" fill="none"/>
+            <circle cx="120" cy="74" r="10" stroke="currentColor" stroke-width="2.5" fill="none"/>
+            <rect x="152" y="46" width="22" height="20" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+            <line x1="156" y1="46" x2="156" y2="66" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="162" y1="46" x2="162" y2="66" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="168" y1="46" x2="168" y2="66" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="fleet-body">
+          <h3>The Wanderer</h3>
+          <div class="fleet-price"><strong>£125</strong><span class="per">/ night</span><span class="week">£779 / wk</span></div>
+          <ul class="fleet-features">
+            <li>5 berths</li><li>Manual</li><li>Bunk beds</li><li>Large fridge-freezer</li><li>Bike rack</li><li>Outdoor shower</li>
+          </ul>
+          <button class="btn btn-ghost btn-block book-van" data-van="The Wanderer (5 berth)">Book Now</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="section section-tight" id="why" style="background:var(--bg-1); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:56px;">
+      <div class="eyebrow">JS TRADING UK · 03 — WHY US</div>
+      <h2>Why travellers choose JS Trading UK</h2>
+      <p>From the first message to the moment you set off, everything is built around getting you on the road with total confidence.</p>
+    </div>
+    <div class="why-grid reveal-stagger">
+      <div class="why-card glass">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Premium, insured fleet</h3>
+        <p>Every motorhome is comprehensively insured, serviced and detailed before it reaches you — no exceptions.</p>
+      </div>
+      <div class="why-card glass">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-1.9 5.4 8.5 8.5 0 0 1-9.6 2.7L4 21l1.4-5.5A8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z" stroke-linejoin="round"/><circle cx="9" cy="11.5" r=".9" fill="currentColor"/><circle cx="12" cy="11.5" r=".9" fill="currentColor"/><circle cx="15" cy="11.5" r=".9" fill="currentColor"/></svg></div>
+        <h3>AI-powered booking</h3>
+        <p>Our assistant finds the right motorhome for your trip and helps you book it in minutes — day or night.</p>
+      </div>
+      <div class="why-card glass">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4"/></svg></div>
+        <h3>UK-wide delivery</h3>
+        <p>We deliver to your door and collect when you're done — no depot visits, no wasted time.</p>
+      </div>
+      <div class="why-card glass">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.6 12.6 12 21l-9-9 8.6-8.6a2 2 0 0 1 1.4-.4h6a2 2 0 0 1 2 2v6a2 2 0 0 1-.4 1.6z" stroke-linejoin="round"/><circle cx="15.5" cy="8.5" r="1.2" fill="currentColor"/></svg></div>
+        <h3>Best price guarantee</h3>
+        <p>Found it cheaper elsewhere? We'll match it and add an extra night on us.</p>
+      </div>
+      <div class="why-card glass">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4" stroke-linecap="round"/><path d="M9 14l1.5 1.5L15 12" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Flexible cancellation</h3>
+        <p>Plans change. Cancel free up to 7 days before departure, no awkward conversations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOKING ============ -->
+<section class="section" id="booking">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">JS TRADING UK · 04 — PLAN YOUR ROUTE</div>
+      <h2>Plan your route</h2>
+      <p>Tell us where and when. We'll confirm availability, hold your dates and send everything you need before departure.</p>
+    </div>
+
+    <div class="booking-wrap glass reveal">
+      <div class="booking-side">
+        <h3>Booking, sorted in minutes</h3>
+        <p>Submit the form and we'll reply within the hour during office hours — or chat to our AI assistant for an instant quote.</p>
+        <ul class="booking-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>No hidden fees<span>The price you see is the price you pay — fuel and insurance options shown upfront.</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>Door-to-door delivery<span>We bring the motorhome to you, fully briefed and ready to drive.</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>Free cancellation<span>Change of plans? Cancel free up to 7 days before pickup.</span></div>
+          </li>
+        </ul>
+        <a href="https://wa.me/447446341832?text=Hi%20JS%20Trading%20UK%2C%20I%27d%20like%20to%20enquire%20about%20a%20motorhome%20booking." target="_blank" rel="noopener" class="whatsapp-link">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.1 8.1 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-1.3-.6-2.2-1.4-3-2.6-.1-.2-.1-.4.1-.6l.5-.6c.1-.2.1-.4 0-.6l-.7-1.6c-.1-.3-.4-.3-.6-.3h-.5c-.2 0-.5.1-.6.3-.2.3-.7.9-.7 2 0 1.2.9 2.3 1 2.5.1.1 1.6 2.5 4 3.5.6.3 1.1.4 1.5.5.6.2 1.1.2 1.5.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.4-.3z"/></svg>
+          Chat with us on WhatsApp
+        </a>
+      </div>
+
+      <form class="booking-form" id="bookingForm">
+        <div class="form-row">
+          <div class="field">
+            <label for="bk-location">Pickup location</label>
+            <select id="bk-location" required>
+              <option value="">Select location</option>
+              <option>London</option>
+              <option>Manchester</option>
+              <option>Leeds / Wetherby</option>
+              <option>Edinburgh</option>
+              <option>Bristol</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bk-van">Motorhome</label>
+            <select id="bk-van">
+              <option value="">No preference / advise me</option>
+              <option>The Highlander (4 berth)</option>
+              <option>The Voyager (2 berth)</option>
+              <option>The Sovereign (6 berth)</option>
+              <option>The Wanderer (5 berth)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="bk-start">Pickup date</label>
+            <input type="date" id="bk-start" required>
+          </div>
+          <div class="field">
+            <label for="bk-end">Return date</label>
+            <input type="date" id="bk-end" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="bk-name">Full name</label>
+            <input type="text" id="bk-name" placeholder="Jane Smith" required>
+          </div>
+          <div class="field">
+            <label for="bk-phone">Phone or WhatsApp</label>
+            <input type="tel" id="bk-phone" placeholder="07xxx xxxxxx" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="bk-email">Email address</label>
+          <input type="email" id="bk-email" placeholder="you@email.com" required>
+        </div>
+        <div class="field">
+          <label for="bk-message">Anything else?</label>
+          <textarea id="bk-message" placeholder="Trip plans, number of passengers, budget…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold btn-block">Request Booking</button>
+        <p class="form-note">We'll never share your details. By submitting, you agree to be contacted about this enquiry.</p>
+        <div class="form-success" id="bookingSuccess">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Thanks — your enquiry is ready. We've opened WhatsApp so you can send it straight to our team.</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about" style="background:var(--bg-1); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="container">
+    <div class="about-wrap">
+      <div class="about-copy reveal">
+        <div class="eyebrow">JS TRADING UK · 05 — OUR STORY</div>
+        <h2 style="font-size:clamp(30px,4vw,46px); margin-bottom:22px;">Built by travellers, for travellers</h2>
+        <p>JS Trading UK started in 2016 in a small Yorkshire workshop with two campervans and a shared love of long British roads. A decade on, we maintain and detail our entire fleet in-house, because the small details — a spotless hob, a fully charged leisure battery, a van that simply starts first time — are what make or break a trip.</p>
+        <p>We're based just outside Leeds but we cover the whole of the UK, delivering motorhomes from the Highlands to Cornwall. Every booking is backed by a real, UK-based team — and our AI assistant is on hand around the clock for the questions that can't wait until morning.</p>
+        <div class="about-stats">
+          <div class="about-stat glass"><strong>10</strong><span>Years on the road</span></div>
+          <div class="about-stat glass"><strong>24</strong><span>Motorhomes in fleet</span></div>
+          <div class="about-stat glass"><strong>5,000+</strong><span>Trips completed</span></div>
+          <div class="about-stat glass"><strong>4.9★</strong><span>Average rating</span></div>
+        </div>
+      </div>
+      <div class="about-visual reveal">
+        <svg viewBox="0 0 600 630" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <rect width="600" height="630" fill="#0E1B2C"/>
+          <path d="M0 630 L0 420 L120 360 L240 430 L380 340 L500 420 L600 360 L600 630 Z" fill="#11283F"/>
+          <path d="M0 630 L0 500 L150 460 L320 510 L470 450 L600 500 L600 630 Z" fill="#16314E"/>
+          <circle cx="450" cy="150" r="70" fill="#CBA45C" opacity=".18"/>
+          <circle cx="450" cy="150" r="38" fill="#EAD3A0" opacity=".5"/>
+          <g stroke="#CBA45C" stroke-width="1.5" opacity=".5">
+            <path d="M40 300 C140 250 220 360 320 300 C420 240 480 320 580 280" fill="none" stroke-dasharray="6 10"/>
+          </g>
+          <g transform="translate(170,440)">
+            <ellipse cx="120" cy="150" rx="150" ry="16" fill="#000" opacity=".35"/>
+            <rect x="10" y="60" width="230" height="92" rx="14" fill="#0B1320" stroke="#3A4A60" stroke-width="2"/>
+            <path d="M10 88 C10 70 28 60 50 60 H120 V112 H10 Z" fill="#16263B" stroke="#3A4A60" stroke-width="2"/>
+            <rect x="78" y="70" width="34" height="26" rx="3" fill="#EAD3A0" opacity=".85"/>
+            <rect x="130" y="74" width="100" height="34" rx="3" fill="#EAD3A0" opacity=".2"/>
+            <circle cx="60" cy="158" r="24" fill="#0B1320" stroke="#3A4A60" stroke-width="3"/>
+            <circle cx="200" cy="158" r="24" fill="#0B1320" stroke="#3A4A60" stroke-width="3"/>
+            <circle cx="60" cy="158" r="7" fill="#CBA45C"/>
+            <circle cx="200" cy="158" r="7" fill="#CBA45C"/>
+          </g>
+        </svg>
+        <div class="about-badge glass">
+          <div class="stars">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+          </div>
+          <div>
+            <strong>4.9 / 5</strong>
+            <span>From verified UK customers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section" id="reviews">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow">JS TRADING UK · 06 — STORIES FROM THE ROAD</div>
+      <h2>Stories from the road</h2>
+      <p>Real trips, real feedback — from the Lake District to the Pembrokeshire coast.</p>
+    </div>
+    <div class="testi-grid reveal-stagger">
+      <div class="testi-card glass">
+        <div class="testi-stars">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+        </div>
+        <p>"The Highlander was spotless and the handover took fifteen minutes flat. We took it round the Lakes for a week and didn't think about the van once — it just worked."</p>
+        <div class="testi-person">
+          <div class="testi-avatar">S&amp;T</div>
+          <div><strong>Sarah &amp; Tom</strong><span>Bristol</span></div>
+        </div>
+      </div>
+      <div class="testi-card glass">
+        <div class="testi-stars">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+        </div>
+        <p>"Booked The Sovereign for a family trip to Scotland through the AI assistant at 11pm — had a confirmed quote before I'd finished my tea. Genuinely the easiest booking I've ever made."</p>
+        <div class="testi-person">
+          <div class="testi-avatar">JW</div>
+          <div><strong>James Whitfield</strong><span>Manchester</span></div>
+        </div>
+      </div>
+      <div class="testi-card glass">
+        <div class="testi-stars">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.6 6.1.6-4.6 4.2 1.3 6.1L10 14.8 4.6 17.5l1.3-6.1L1.3 7.2l6.1-.6L10 1z"/></svg>
+        </div>
+        <p>"Delivered to our door in Edinburgh, collected from our door a week later in Pembrokeshire. The Wanderer had everything we needed for two kids and a dog — couldn't fault it."</p>
+        <div class="testi-person">
+          <div class="testi-avatar">PA</div>
+          <div><strong>Priya Anand</strong><span>Edinburgh</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section" id="contact" style="background:var(--bg-1); border-top:1px solid var(--line);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">JS TRADING UK · 07 — GET IN TOUCH</div>
+      <h2>Get in touch</h2>
+      <p>Questions about a specific motorhome, a one-off route, or selling your own van to us? Send a message and we'll get back to you fast.</p>
+    </div>
+    <div class="contact-wrap reveal">
+      <div class="contact-form-panel glass">
+        <form id="contactForm">
+          <div class="field" style="margin-bottom:18px;">
+            <label for="ct-name">Name</label>
+            <input type="text" id="ct-name" placeholder="Your name" required>
+          </div>
+          <div class="field" style="margin-bottom:18px;">
+            <label for="ct-email">Email</label>
+            <input type="email" id="ct-email" placeholder="you@email.com" required>
+          </div>
+          <div class="field" style="margin-bottom:18px;">
+            <label for="ct-message">Message</label>
+            <textarea id="ct-message" placeholder="How can we help?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold btn-block">Send Message</button>
+          <div class="form-success" id="contactSuccess" style="margin-top:16px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Thanks — your email client should now be open with your message ready to send.</span>
+          </div>
+        </form>
+        <ul class="contact-info">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 3a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c1 .3 2 .6 3 .7A2 2 0 0 1 22 16.9z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>0800 170 0491 (free) · 07446 341832 (WhatsApp)<span>Mon–Fri 8am–7pm · Sat–Sun 9am–5pm</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z" opacity="0"/><path d="M2 6l8.5 6L19 6M3 6h16v12H3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>jstrading707@gmail.com<span>We aim to reply within one working hour</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4"/></svg>
+            <div>Unit 7, Vale Business Park, Wetherby, West Yorkshire, LS22 4DH<span>Collection &amp; drop-off available by appointment</span></div>
+          </li>
+        </ul>
+      </div>
+      <div class="contact-map-panel glass">
+        <iframe class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=Wetherby,%20West%20Yorkshire,%20UK&t=&z=12&ie=UTF8&iwloc=&output=embed"
+          title="JS Trading UK location map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#hero" class="brand">
+          <img class="brand-mark" src="logo.jpg" alt="JS Trading UK logo">
+          <span class="brand-text"><strong>JS TRADING UK</strong><span>MOTORHOME BUYERS</span></span>
+        </a>
+        <p>Premium motorhome and caravan hire, sales and buying service, covering the whole of the UK. Fully insured, friendly and professional.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/jstradinguk" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.5.3v2.8h-1.7c-1.3 0-1.6.7-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/jstradinguk" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@jstrading82" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.5 2h2.7c.2 1.6 1.3 3 3.3 3.2v2.7c-1.4 0-2.6-.4-3.6-1.1v6.6a5 5 0 1 1-5-5c.3 0 .6 0 .9.1v2.8a2.2 2.2 0 1 0 1.7 2.1V2z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#fleet">Our Fleet</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get Started</h4>
+        <ul>
+          <li><a href="#booking">Book a Motorhome</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="https://wa.me/447446341832" target="_blank" rel="noopener">WhatsApp Us</a></li>
+          <li><a href="#" id="footerChatLink">Ask the AI Assistant</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Rental Agreement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 JS Trading UK · Registered in England &amp; Wales</span>
+      <span><a href="#hero">Back to top ↑</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CHATBOT ============ -->
+<button class="chat-toggle" id="chatToggle" aria-label="Open Motorhome AI Assistant">
+  <span class="ping"></span>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-1.9 5.4 8.5 8.5 0 0 1-9.6 2.7L4 21l1.4-5.5A8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z" stroke-linejoin="round"/></svg>
+</button>
+
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-head">
+    <span class="dot"></span>
+    <div>
+      <strong>Motorhome AI Assistant</strong>
+      <span>Usually replies instantly</span>
+    </div>
+    <button class="chat-close" id="chatClose" aria-label="Close chat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="msg bot">Hi, I'm the JS Trading UK AI Assistant 👋 I can help you find a motorhome, check pricing, or pass your details to the team. What would you like to do?</div>
+    <div class="chat-quick" id="chatQuickInitial">
+      <button data-q="book">Book a motorhome</button>
+      <button data-q="pricing">Pricing &amp; fleet</button>
+      <button data-q="locations">Pickup locations</button>
+      <button data-q="human">Talk to a human</button>
+    </div>
+  </div>
+  <div class="chat-input-row">
+    <input type="text" id="chatInput" placeholder="Type a message…">
+    <button id="chatSend" aria-label="Send">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+/* ---------- NAV ---------- */
+const siteNav = document.getElementById('siteNav');
+window.addEventListener('scroll', () => {
+  siteNav.classList.toggle('scrolled', window.scrollY > 24);
+}, { passive: true });
+
+const navToggle = document.getElementById('navToggle');
+const navMobile = document.getElementById('navMobile');
+const navClose = document.getElementById('navClose');
+navToggle.addEventListener('click', () => navMobile.classList.toggle('open'));
+navClose.addEventListener('click', () => navMobile.classList.remove('open'));
+navMobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navMobile.classList.remove('open')));
+
+/* ---------- REVEAL ANIMATIONS ---------- */
+const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+revealEls.forEach(el => revealObserver.observe(el));
+
+/* ---------- JOURNEY RAIL ---------- */
+const railFill = document.getElementById('railFill');
+const railNodes = document.querySelectorAll('.rail-node');
+const sectionIds = ['hero','fleet','why','booking','about','reviews','contact'];
+const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+function updateRail() {
+  const scrollY = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = docHeight > 0 ? Math.min(scrollY / docHeight, 1) : 0;
+  railFill.style.height = (progress * 100) + '%';
+
+  let activeIndex = 0;
+  sections.forEach((sec, i) => {
+    const rect = sec.getBoundingClientRect();
+    if (rect.top <= window.innerHeight * 0.45) activeIndex = i;
+  });
+  railNodes.forEach((node, i) => node.classList.toggle('active', i === activeIndex));
+}
+window.addEventListener('scroll', updateRail, { passive: true });
+window.addEventListener('resize', updateRail);
+updateRail();
+
+/* ---------- FLEET -> BOOKING ---------- */
+document.querySelectorAll('.book-van').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const van = btn.getAttribute('data-van');
+    const select = document.getElementById('bk-van');
+    select.value = van;
+    document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const wrap = select.closest('.field');
+    wrap.style.transition = 'box-shadow .4s';
+    wrap.style.boxShadow = '0 0 0 3px rgba(203,164,92,.4)';
+    setTimeout(() => wrap.style.boxShadow = 'none', 1200);
+  });
+});
+
+/* ---------- BOOKING FORM ---------- */
+const bookingForm = document.getElementById('bookingForm');
+bookingForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.getElementById('bk-name').value;
+  const phone = document.getElementById('bk-phone').value;
+  const email = document.getElementById('bk-email').value;
+  const location = document.getElementById('bk-location').value;
+  const van = document.getElementById('bk-van').value || 'No preference';
+  const start = document.getElementById('bk-start').value;
+  const end = document.getElementById('bk-end').value;
+  const message = document.getElementById('bk-message').value;
+
+  const text = `Hi JS Trading UK, I'd like to request a booking:
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Pickup location: ${location}
+Motorhome: ${van}
+Dates: ${start} to ${end}
+Notes: ${message}`;
+
+  window.open(`https://wa.me/447446341832?text=${encodeURIComponent(text)}`, '_blank');
+  document.getElementById('bookingSuccess').classList.add('show');
+});
+
+/* ---------- CONTACT FORM ---------- */
+const contactForm = document.getElementById('contactForm');
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.getElementById('ct-name').value;
+  const email = document.getElementById('ct-email').value;
+  const message = document.getElementById('ct-message').value;
+  const subject = encodeURIComponent(`Website enquiry from ${name}`);
+  const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
+  window.location.href = `mailto:jstrading707@gmail.com?subject=${subject}&body=${body}`;
+  document.getElementById('contactSuccess').classList.add('show');
+});
+
+/* ---------- CHATBOT ---------- */
+const chatToggle = document.getElementById('chatToggle');
+const chatPanel = document.getElementById('chatPanel');
+const chatClose = document.getElementById('chatClose');
+const chatBody = document.getElementById('chatBody');
+const chatInput = document.getElementById('chatInput');
+const chatSend = document.getElementById('chatSend');
+const footerChatLink = document.getElementById('footerChatLink');
+
+function openChat() { chatPanel.classList.add('open'); chatInput.focus(); }
+chatToggle.addEventListener('click', () => chatPanel.classList.toggle('open'));
+chatClose.addEventListener('click', () => chatPanel.classList.remove('open'));
+footerChatLink.addEventListener('click', (e) => { e.preventDefault(); openChat(); });
+
+function addMsg(text, who) {
+  const div = document.createElement('div');
+  div.className = `msg ${who}`;
+  div.textContent = text;
+  chatBody.appendChild(div);
+  chatBody.scrollTop = chatBody.scrollHeight;
+  return div;
+}
+
+function addQuick(options) {
+  const wrap = document.createElement('div');
+  wrap.className = 'chat-quick';
+  options.forEach(opt => {
+    const b = document.createElement('button');
+    b.textContent = opt.label;
+    b.addEventListener('click', () => handleIntent(opt.value, opt.label));
+    wrap.appendChild(b);
+  });
+  chatBody.appendChild(wrap);
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+const leadState = { name: null, dates: null, budget: null, step: null };
+
+function botReply(text, delay = 500) {
+  setTimeout(() => addMsg(text, 'bot'), delay);
+}
+
+function handleIntent(intent, label) {
+  if (label) addMsg(label, 'user');
+
+  switch (intent) {
+    case 'book':
+      botReply("Great — I can take a few details and pass them to our team, or you can jump straight to the booking form. Which would you prefer?");
+      setTimeout(() => addQuick([
+        { value: 'lead-start', label: 'Send details via chat' },
+        { value: 'goto-booking', label: 'Go to booking form' }
+      ]), 550);
+      break;
+    case 'pricing':
+      botReply("Here's our current pricing per night (weekly rates shown on each card):\n• The Voyager (2 berth) — £95\n• The Wanderer (5 berth) — £125\n• The Highlander (4 berth) — £145\n• The Sovereign (6 berth) — £215\nAll prices include insurance, breakdown cover and a full handover.", 600);
+      setTimeout(() => addQuick([
+        { value: 'goto-fleet', label: 'View the fleet' },
+        { value: 'book', label: 'Book one of these' }
+      ]), 1300);
+      break;
+    case 'locations':
+      botReply("We deliver and collect UK-wide, with dedicated pickup points in London, Manchester, Leeds/Wetherby, Edinburgh and Bristol. Delivery to your home address is available for a small fee depending on distance.", 600);
+      setTimeout(() => addQuick([
+        { value: 'book', label: 'Book a motorhome' },
+        { value: 'human', label: 'Talk to a human' }
+      ]), 1300);
+      break;
+    case 'human':
+      botReply("Of course — our team is on WhatsApp and usually replies within minutes during office hours (Mon–Fri 8am–7pm, Sat–Sun 9am–5pm).", 500);
+      setTimeout(() => {
+        const wrap = document.createElement('div');
+        wrap.className = 'chat-quick';
+        wrap.innerHTML = `<a class="msg bot" style="text-decoration:none; display:inline-flex; align-items:center; gap:8px;" target="_blank" rel="noopener" href="https://wa.me/447446341832?text=Hi%20JS%20Trading%20UK%2C%20I%27d%20like%20to%20speak%20to%20someone%20about%20a%20motorhome.">Open WhatsApp chat →</a>`;
+        chatBody.appendChild(wrap);
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }, 700);
+      break;
+    case 'goto-booking':
+      botReply("Taking you to the booking form now — your details will carry across if you've already told me what you're after.", 400);
+      setTimeout(() => { chatPanel.classList.remove('open'); document.getElementById('booking').scrollIntoView({ behavior: 'smooth' }); }, 700);
+      break;
+    case 'goto-fleet':
+      botReply("Here's our fleet — scroll through and hit 'Book Now' on any motorhome to start your request.", 400);
+      setTimeout(() => { chatPanel.classList.remove('open'); document.getElementById('fleet').scrollIntoView({ behavior: 'smooth' }); }, 700);
+      break;
+    case 'lead-start':
+      leadState.step = 'name';
+      botReply("Lovely — what's your name?", 450);
+      break;
+    default:
+      botReply("Thanks — I've noted that. Is there anything else I can help with?", 450);
+      setTimeout(() => addQuick([
+        { value: 'book', label: 'Book a motorhome' },
+        { value: 'pricing', label: 'Pricing & fleet' },
+        { value: 'human', label: 'Talk to a human' }
+      ]), 1000);
+  }
+}
+
+document.getElementById('chatQuickInitial').addEventListener('click', (e) => {
+  if (e.target.tagName === 'BUTTON') handleIntent(e.target.getAttribute('data-q'), e.target.textContent);
+});
+
+function handleFreeText(text) {
+  addMsg(text, 'user');
+  const lower = text.toLowerCase();
+
+  if (leadState.step === 'name') {
+    leadState.name = text;
+    leadState.step = 'dates';
+    botReply(`Thanks, ${text.split(' ')[0]}! What dates are you thinking of travelling?`);
+    return;
+  }
+  if (leadState.step === 'dates') {
+    leadState.dates = text;
+    leadState.step = 'budget';
+    botReply("Got it. And roughly what's your budget for the trip (per night or total)?");
+    return;
+  }
+  if (leadState.step === 'budget') {
+    leadState.budget = text;
+    leadState.step = null;
+    botReply(`Perfect — here's what I've got:\nName: ${leadState.name}\nDates: ${leadState.dates}\nBudget: ${leadState.budget}\nI'll pass this straight to our team. Tap below to send it on WhatsApp so we can confirm availability.`, 600);
+    setTimeout(() => {
+      const msg = `Hi JS Trading UK, I'd like a quote.\nName: ${leadState.name}\nDates: ${leadState.dates}\nBudget: ${leadState.budget}`;
+      const wrap = document.createElement('div');
+      wrap.className = 'chat-quick';
+      wrap.innerHTML = `<a class="msg bot" style="text-decoration:none; display:inline-flex; align-items:center; gap:8px;" target="_blank" rel="noopener" href="https://wa.me/447446341832?text=${encodeURIComponent(msg)}">Send to WhatsApp →</a>`;
+      chatBody.appendChild(wrap);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }, 1300);
+    return;
+  }
+
+  if (lower.includes('price') || lower.includes('cost') || lower.includes('£')) return handleIntent('pricing');
+  if (lower.includes('cancel')) { botReply("You can cancel free of charge up to 7 days before your pickup date — just let us know via WhatsApp or email."); return; }
+  if (lower.includes('insur')) { botReply("Every motorhome comes with fully comprehensive insurance and UK breakdown cover included in the price — drivers must be 25+ with a full licence."); return; }
+  if (lower.includes('location') || lower.includes('pickup') || lower.includes('deliver')) return handleIntent('locations');
+  if (lower.includes('book')) return handleIntent('book');
+  if (lower.includes('human') || lower.includes('person') || lower.includes('call')) return handleIntent('human');
+
+  botReply("I can help with bookings, pricing, pickup locations, or put you in touch with the team. What would you like to know?", 500);
+  setTimeout(() => addQuick([
+    { value: 'book', label: 'Book a motorhome' },
+    { value: 'pricing', label: 'Pricing & fleet' },
+    { value: 'locations', label: 'Pickup locations' },
+    { value: 'human', label: 'Talk to a human' }
+  ]), 1000);
+}
+
+chatSend.addEventListener('click', () => {
+  const val = chatInput.value.trim();
+  if (!val) return;
+  handleFreeText(val);
+  chatInput.value = '';
+});
+chatInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') chatSend.click();
+});
+</script>
+</body>
+</html>
