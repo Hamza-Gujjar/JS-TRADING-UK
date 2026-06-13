@@ -1238,7 +1238,7 @@ const footerChatLink = document.getElementById('footerChatLink');
 function openChat() { chatPanel.classList.add('open'); chatInput.focus(); }
 chatToggle.addEventListener('click', () => chatPanel.classList.toggle('open'));
 chatClose.addEventListener('click', () => chatPanel.classList.remove('open'));
-footerChatLink.addEventListener('click', (e) => { e.preventDefault(); openChat(); });
+if (footerChatLink) footerChatLink.addEventListener('click', (e) => { e.preventDefault(); openChat(); });
 
 function addMsg(text, who) {
   const div = document.createElement('div');
@@ -1260,6 +1260,10 @@ function addQuick(options) {
   });
   chatBody.appendChild(wrap);
   chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+function botReply(text, delay = 500) {
+  setTimeout(() => addMsg(text, 'bot'), delay);
 }
 
 const leadState = { name: null, dates: null, budget: null, step: null };
